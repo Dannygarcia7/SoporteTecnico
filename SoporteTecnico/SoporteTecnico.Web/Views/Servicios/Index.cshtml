@@ -1,11 +1,29 @@
-﻿@model List<SoporteTecnico.Web.Models.ServicioModel>
+﻿@model List<SoporteTecnico.BL.Servicio>
 @{
     ViewBag.Title = "Index";
 }
 
 <h2><font color="Navy">NUESTROS SERVICIOS</font></h2>
 
-@foreach (var servicio in Model)
-{
-    <p>@servicio.ID @servicio.Descripcion</p>
-}
+
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                Codigo Servicio
+            </th>
+            <th>
+                Descripcion
+            </th>
+        </tr>
+    </thead>
+    @foreach (var servicio in Model)
+    {
+        <tr>
+            <td>@servicio.Id</td>
+            <td>@servicio.Descripcion</td>
+        </tr>
+    }
+
+</table>
