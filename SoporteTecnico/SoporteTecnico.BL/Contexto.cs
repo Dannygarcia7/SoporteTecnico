@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace SoporteTecnico.BL
 {
-   public class Contexto: DbContext
+    public class Contexto : DbContext
     {
-        public Contexto():base(@"Data Source=(LocalDb\MSSQLLocalDB;AttachDBFilename="+
-            Environment.GetFolderPath(Environment.SpecialFolder.Desktop)+@"\SoporTechDB.mdf")
+        public Contexto() : base(@"Data Source=(LocalDb)\MSSQLLocalDB;AttachDBFilename=" +
+            Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\SoporteckDB.mdf")
         {
 
         }

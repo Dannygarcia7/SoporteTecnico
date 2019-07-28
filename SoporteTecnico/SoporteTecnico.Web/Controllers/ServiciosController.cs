@@ -9,11 +9,16 @@ namespace SoporteTecnico.Web.Controllers
 {
     public class ServiciosController : Controller
     {
-        // GET: Servicios
+        ServiciosBL _serviciosBL;
+
+        public ServiciosController()
+        {
+            _serviciosBL = new ServiciosBL();
+        }
+        // GET: Productos
         public ActionResult Index()
         {
-            var serviciosBL = new ServiciosBL();
-            var listadeServicios = serviciosBL.ObtenerServicios();
+            var listadeServicios= _serviciosBL.ObtenerSevicios();
 
             return View(listadeServicios);
         }

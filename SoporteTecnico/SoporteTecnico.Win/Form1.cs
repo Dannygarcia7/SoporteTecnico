@@ -23,9 +23,9 @@ namespace SoporteTecnico.Win
             var serviciosBL = new ServiciosBL();
             var listadeServicios = serviciosBL.ObtenerServicios();
 
-            foreach (var servicios in listadeServicios)
+            foreach (var servicio in listadeServicios)
             {
-                MessageBox.Show(servicios.Descripcion);
+                MessageBox.Show(servicio.Descripcion);
             }
 
         }
