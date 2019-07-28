@@ -22,6 +22,8 @@ namespace SoporteTecnico.BL
             ListadeServicios = _contexto.Servicios.ToList();
             return ListadeServicios;
         }
+
+
     }
 }
     
