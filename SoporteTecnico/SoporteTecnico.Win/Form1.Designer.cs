@@ -3,14 +3,14 @@
     partial class Form1
     {
         /// <summary>
-        /// Variable del diseñador necesaria.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Limpiar los recursos que se estén usando.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,16 +20,17 @@
             base.Dispose(disposing);
         }
 
-        #region Código generado por el Diseñador de Windows Forms
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Método necesario para admitir el Diseñador. No se puede modificar
-        /// el contenido de este método con el editor de código.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.listadeServiciosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listadeServiciosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -47,11 +48,18 @@
             this.listadeServiciosDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeServiciosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeServiciosBindingNavigator)).BeginInit();
             this.listadeServiciosBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listadeServiciosDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
             // 
             // listadeServiciosBindingSource
             // 
@@ -83,7 +91,7 @@
             this.listadeServiciosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listadeServiciosBindingNavigator.Name = "listadeServiciosBindingNavigator";
             this.listadeServiciosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listadeServiciosBindingNavigator.Size = new System.Drawing.Size(514, 25);
+            this.listadeServiciosBindingNavigator.Size = new System.Drawing.Size(454, 25);
             this.listadeServiciosBindingNavigator.TabIndex = 0;
             this.listadeServiciosBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -187,11 +195,12 @@
             this.listadeServiciosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listadeServiciosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
             this.listadeServiciosDataGridView.DataSource = this.listadeServiciosBindingSource;
-            this.listadeServiciosDataGridView.Location = new System.Drawing.Point(21, 51);
+            this.listadeServiciosDataGridView.Location = new System.Drawing.Point(24, 69);
             this.listadeServiciosDataGridView.Name = "listadeServiciosDataGridView";
-            this.listadeServiciosDataGridView.Size = new System.Drawing.Size(465, 260);
+            this.listadeServiciosDataGridView.Size = new System.Drawing.Size(410, 220);
             this.listadeServiciosDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -206,16 +215,23 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Descripcion";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Precio";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Precio";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 323);
+            this.ClientSize = new System.Drawing.Size(454, 309);
             this.Controls.Add(this.listadeServiciosDataGridView);
             this.Controls.Add(this.listadeServiciosBindingNavigator);
             this.Name = "Form1";
             this.Text = "Form1";
-            //this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeServiciosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeServiciosBindingNavigator)).EndInit();
             this.listadeServiciosBindingNavigator.ResumeLayout(false);
@@ -228,6 +244,11 @@
 
         #endregion
 
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.DataGridView listadeServiciosDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.BindingSource listadeServiciosBindingSource;
         private System.Windows.Forms.BindingNavigator listadeServiciosBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
@@ -242,9 +263,5 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton listadeServiciosBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView listadeServiciosDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }
 }
-
