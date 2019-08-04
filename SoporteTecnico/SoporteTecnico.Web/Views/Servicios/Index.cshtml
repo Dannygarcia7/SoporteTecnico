@@ -16,6 +16,9 @@
             <th>
                 Descripcion
             </th>
+            <th>
+                Precio
+            </th>
         </tr>
     </thead>
     @foreach (var servicio in Model)
@@ -23,6 +26,8 @@
         <tr>
             <td>@servicio.Id</td>
             <td>@servicio.Descripcion</td>
+            <td>@servicio.Precio</td>
+
         </tr>
     }
 
